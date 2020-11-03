@@ -24,5 +24,12 @@ Notes:
 
 
 def emotify(txt):
-    # Your code here
+    # put it to dictionary for what you want to replace
+    words = {"smile":":D", "grin":":)", "sad":":(", "mad":":P"}
+    # k represents first part of dictionary and v represents second part
+    for k, v in words.items():
+        # need to use the original reference to replace values
+        txt = txt.replace(k, v)
+    return txt
 
+print(emotify("Make me smile"))
